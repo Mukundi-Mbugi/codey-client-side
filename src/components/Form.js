@@ -10,12 +10,12 @@ function Form() {
                 <input type="text" placeholder="Title" />
                 <input type="textarea" placeholder="blog post" />
                 <button
-                  class="btn waves-effect waves-light"
+                  className="btn waves-effect waves-light"
                   type="submit"
                   name="action"
                 >
                   Submit
-                  <i class="material-icons right">send</i>
+                  <i className="material-icons right">send</i>
                 </button>
               </form>
             </div>

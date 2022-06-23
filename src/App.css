@@ -53,4 +53,9 @@
   background-color: rgb(8, 128, 128);
   cursor: pointer;
 }
+.cards.card-content{
+  width: 100%;
+  height: 100vh;
+  border: solid 2px red;
   
+}
