@@ -1,33 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Blog from "../Blog/Blog";
-import EditPost from "../Edit/EditPost";
 
-function Blogs() {
-  const [blogs, setBlogs] = useState([]);
-
-  useEffect(() => {
-    fetch("https://codeyblogs.herokuapp.com/")
-      .then((res) => res.json())
-      .then((data) => setBlogs(data));
-  }, []);
-
-  function handleUpdateBlog(updatedBlogObj) {
-    const updatedBlogs = blogs.map((blog) => {
-      if (blog.id === updatedBlogObj.id) {
-        return updatedBlogObj;
-      } else {
-        return Blog;
-      }
-    });
-    setBlogs(updatedBlogs);
-  }
+function Blogs({ blogs, onDelete, onBlogUpdate }) {
 
   return (
     <div>
-      {blogs.map((blog, index) => (
-        <div>
-          <div key={index} className="card horizontal">
-            <Blog blog={blog} />
+      {blogs.map((blog) => (
+        <div key={blog.id}>
+          <div  className="card horizontal">
+            <Blog blog={blog} onDelete={onDelete} onBlogUpdate={onBlogUpdate} />
           </div>
         </div>
       ))}

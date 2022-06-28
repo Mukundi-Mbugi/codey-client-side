@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Form.css";
 
-function Form() {
+function Form({onUpdate}) {
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
 
@@ -15,10 +15,8 @@ function Form() {
 
   function handleSubmitClick(e) {
     e.preventDefault();
-    console.log(e);
 
-    console.log(title, body);
-    fetch("https://codeyblogs.herokuapp.com/posts", {
+    fetch('https://codeyblogs.herokuapp.com/posts', {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -26,8 +24,11 @@ function Form() {
       body: JSON.stringify({
         title: title,
         body: body,
-      }),
-    });
+      })
+    })
+    .then(res=> res.json())
+    .then(data => onUpdate(data))
+    
   }
 
   return (

@@ -1,28 +1,27 @@
 import React, { useState } from "react";
+import EditForm from "../EditForm/EditForm";
 
-function Blog({ blog }) {
+function Blog({ blog, onDelete, onBlogUpdate }) {
   const [isEditing, setIsEditing] = useState(false)
-  // const [id, title, body, name] = [blog.author.id, blog.title, blog.body, blog.author.name, ]
-
+  
   function handleDeleteClick() {
     console.log({ id: blog.id });
     fetch(`https://codeyblogs.herokuapp.com/posts/${blog.id}`, {
       method: "DELETE",
     })
-      .then((res) => res.json())
-      .then((data) => console.log(data));
+      onDelete(blog.id);
   }
 
   return (
     <div>
       <div className="card horizontal">
         <div className="card-content">
-          <h6 className="black-text text-lighten-1">I{blog.title}</h6>
-          <p className="black-text text-lighten-1">{blog.body}</p>
+          <h6 className="black-text text-lighten-1">{blog.title}</h6>
+          {!isEditing ? (<p className="black-text text-lighten-1">{blog.body}</p> ): 
+          <EditForm blog={blog} onBlogUpdate={onBlogUpdate} isEditing={isEditing} setIsEditing={setIsEditing} />}
         </div>
         <div className="card-action">
-          <h6>{`by: ${blog.title}`}</h6>
-          
+                  
           <i
             className="small material-icons teal-text"
             onClick={handleDeleteClick}
