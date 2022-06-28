@@ -2,13 +2,6 @@
   text-align: center;
 }
 
-.nav-bar a, li{
-  font-size: 22px !important;
-}
-.nav-bar{
-  display: flex;
-  justify-content: space-around !important;
-}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -38,19 +31,5 @@
   height: 3rem;
   background-color: #d8dadb;
 }
-.form1{
-  top: 0!important;
-}
-.form1 button{
-  padding: 2px 8px !important;
-  margin-top: 5px;
-  width: 100%;
-}
-.container-fluid .row:hover{
-  background-color: rgb(8, 128, 128);
-  cursor: pointer;
-}
-.card-action{
-  display: flex;
-  justify-content: space-between;
-}
+
+

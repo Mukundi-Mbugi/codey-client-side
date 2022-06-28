@@ -1,0 +1,8 @@
+.container-fluid .row:hover{
+    background-color: rgb(8, 128, 128);
+    cursor: pointer;
+  }
+  .card-action{
+    display: flex;
+    justify-content: space-between;
+  }

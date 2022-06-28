@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 
 function Blog({ blog }) {
+  const [isEditing, setIsEditing] = useState(false)
   // const [id, title, body, name] = [blog.author.id, blog.title, blog.body, blog.author.name, ]
 
   function handleDeleteClick() {
@@ -21,13 +22,14 @@ function Blog({ blog }) {
         </div>
         <div className="card-action">
           <h6>{`by: ${blog.title}`}</h6>
+          
           <i
             className="small material-icons teal-text"
             onClick={handleDeleteClick}
           >
             delete
           </i>
-          <i className="small material-icons teal-text lighten-2">create</i>
+          <i className="small material-icons teal-text lighten-2" onClick={() => setIsEditing((isEditing) => !isEditing)}>create</i>
         </div>
       </div>
     </div>

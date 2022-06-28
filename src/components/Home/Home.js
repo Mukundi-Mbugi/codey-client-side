@@ -1,7 +1,7 @@
 import React from "react";
-import Sidebar from "./Sidebar";
-import Form from "./Form";
-import Blogs from "./Blogs";
+import Sidebar from "../Sidebar";
+import Form from "../Form/Form";
+import Blogs from "../Blogs/Blogs";
 
 function Home() {
   return (
