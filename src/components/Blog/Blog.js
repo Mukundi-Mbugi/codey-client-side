@@ -14,7 +14,7 @@ function Blog({ blog, onDelete, onBlogUpdate, onBlogLike }) {
     onDelete(blog.id);
   }
 
-  function handleLikeClick(){
+  function handleLikeClick() {
     console.log({ id: blog.id });
     fetch(`https://codeyblogs.herokuapp.com/likes/${blog.id}`, {
       method: "PATCH",
@@ -23,7 +23,7 @@ function Blog({ blog, onDelete, onBlogUpdate, onBlogLike }) {
       },
       body: JSON.stringify({
         likes: blog.likes + 1,
-      })
+      }),
     });
     onBlogLike(blog.id);
   }
@@ -34,7 +34,9 @@ function Blog({ blog, onDelete, onBlogUpdate, onBlogLike }) {
         <div className="card-content">
           <h3 className="black-text text-lighten-1">{blog.title}</h3>
           {!isEditing ? (
-            <Body blog={blog} />
+            <div className="blog-posts">
+              <Body blog={blog} />
+            </div>
           ) : (
             <EditForm
               blog={blog}
@@ -57,13 +59,15 @@ function Blog({ blog, onDelete, onBlogUpdate, onBlogLike }) {
           >
             create
           </i>
+          <div className="likes">
           <i
             className="icon small material-icons teal-text"
             onClick={handleLikeClick}
           >
             favorite
           </i>
-          <p className="black-text text-lighten-1">{blog.likes}</p>
+          <p className="icon">{blog.likes}</p>
+          </div>
         </div>
       </div>
     </div>

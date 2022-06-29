@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import './EditForm.css'
 
 function EditForm({ blog, onBlogUpdate, isEditing, setIsEditing }) {
   const [blogBody, setBlogBody] = useState(blog.body);
@@ -23,18 +24,18 @@ function EditForm({ blog, onBlogUpdate, isEditing, setIsEditing }) {
 
   return (
     <div>
-      <form onSubmit={handleUpdateForm}>
-        <input
+      <form className="update-form" onSubmit={handleUpdateForm}>
+        <textarea
           type="text"
           onChange={(e) => setBlogTitle(e.target.value)}
           value={blogTitle}
         />
-        <input
+        <textarea
           type="text"
           onChange={(e) => setBlogBody(e.target.value)}
           value={blogBody}
         />
-        <input type="submit" value="Update" />
+        <button>update</button> 
       </form>
     </div>
   );

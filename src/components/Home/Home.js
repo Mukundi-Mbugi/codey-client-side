@@ -40,16 +40,17 @@ function Home() {
   }
 
   return (
-    <div className="container">
-      <Blogs
-        blogs={blogs}
-        onDelete={handleDelete}
-        onBlogUpdate={handleUpdate}
-        onBlogLike={handleLike}
-      />
-
+    <>
+      <div className="container">
+        <Blogs
+          blogs={blogs}
+          onDelete={handleDelete}
+          onBlogUpdate={handleUpdate}
+          onBlogLike={handleLike}
+        />
+      </div>
       <Form onUpdate={handlePost} />
-    </div>
+    </>
   );
 }
 

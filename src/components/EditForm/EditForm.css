@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;700&display=swap");
+
+.body{
+    font-family: 'Poppins', sans-serif;
+}
+.update-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #1d3153;
+
+    font-size: 1.2rem;
+    width: 50%;
+    height: 50%;
+    padding: 20px;
+}
+.update-form textarea {
+    border: 1px solid #1d3153;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: auto;
+    height: auto;
+}
+.update-form textarea:focus {
+    outline: none;
+}
+.update-form button{
+    background-color: #1d3153;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 3px 12px;
+    margin-top: 5px;
+    width: auto;
+    height: auto;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+}

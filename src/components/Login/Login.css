@@ -1,3 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;700&display=swap");
+
+.body{
+    font-family: 'Nunito', sans-serif;
+}
 * {
   background-color: #f3f3f9;
   color: #1d3153;
@@ -7,6 +12,15 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-family: 'Poppins', sans-serif;
+}
+.login-form label{
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-left: 0;
 }
 .login-form {
   display: flex;
@@ -20,12 +34,7 @@
   height: 50%;
   padding: 20px;
 }
-/* .login-form label{
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-    justify-content: flex-start;
-    display: inline-block;
-} */
+
 .login-form input {
   border: 1px solid #1d3153;
   border-radius: 5px;
@@ -37,12 +46,14 @@
   border: 1px solid #1d3153;
   border-radius: 5px;
   padding: 10px;
-  margin-top: 10px;
+  margin-top: 5px;
   margin-bottom: 20px;
   background-color: #1d3153;
   color: white;
-  width: 50%;
+  width: 80%;
+  font-size: 20px;
   cursor: pointer;
+  font-family: 'Poppins', sans-serif;
 }
 .login-form button:hover {
   background-color: #2b0d77;
@@ -53,16 +64,27 @@
   align-items: center;
   justify-content: center;
 }
+.error_div{
+  background-color: white;
+}
 .error {
   color: red;
   font-size: 12px;
   text-align: center;
   align-items: center;
+  background-color: white;
+}
+.sign-text{
+  background-color: white;
 }
 .sign-link {
   color: rgb(255, 111, 0);
   cursor: pointer;
+  
 }
 .sign-link:hover {
   color: rgb(252, 150, 72);
+}
+.class-btn{
+  background-color: white;
 }

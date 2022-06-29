@@ -38,14 +38,15 @@ function Form({onUpdate}) {
       <div className="form1">
         <div>
           <form className="create-form" onSubmit={handleSubmitClick}>
+            <h1>create a new blog post</h1>
             <input
               type="text"
-              placeholder="Title"
+              placeholder="Blog Title..."
               onChange={handleTitleChange}
               value={title}
             />
             <textarea
-              placeholder="blog post"
+              placeholder="write your blog here..."
               onChange={handleBodyChange}
               value={body}
             />
@@ -54,7 +55,7 @@ function Form({onUpdate}) {
               type="submit"
               name="action"
             >
-              Submit
+              Publish
               <i className="material-icons right">send</i>
             </button>
           </form>

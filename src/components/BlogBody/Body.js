@@ -12,8 +12,8 @@ function Body({ blog }) {
   return (
     <div>
         <div className="card-content">
-            {readMore ?  body : body.substring(0, 200)}
-            <button className='toggle-read-btn' onClick={toggleReadMore} >...read more</button>
+            {readMore ?  <p>{body}</p> : body.substring(0, 200)}
+            <button className='toggle-read-btn' onClick={toggleReadMore} >{!readMore ? '..read more' : 'read less'}</button>
         </div>
     </div>
   )
