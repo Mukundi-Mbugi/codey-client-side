@@ -1,5 +1,6 @@
 import React from "react";
 import Blog from "../Blog/Blog";
+import './Blogs.css'
 
 function Blogs({ blogs, onDelete, onBlogUpdate }) {
 

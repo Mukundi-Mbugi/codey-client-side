@@ -8,6 +8,7 @@ function Form({onUpdate}) {
   function handleTitleChange(e) {
     setTitle(e.target.value);
   }
+
   function handleBodyChange(e) {
     setBody(e.target.value);
   }
@@ -29,13 +30,14 @@ function Form({onUpdate}) {
     .then(res=> res.json())
     .then(data => onUpdate(data))
     
+    
   }
 
   return (
     <div>
       <div className="form1">
         <div>
-          <form onSubmit={handleSubmitClick}>
+          <form className="create-form" onSubmit={handleSubmitClick}>
             <input
               type="text"
               placeholder="Title"

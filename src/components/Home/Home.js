@@ -1,10 +1,8 @@
-import React, {useEffect, useState} from "react";
-import Sidebar from "../Sidebar";
+import React, { useEffect, useState } from "react";
 import Form from "../Form/Form";
 import Blogs from "../Blogs/Blogs";
 
 function Home() {
-
   const [blogs, setBlogs] = useState([]);
 
   useEffect(() => {
@@ -31,21 +29,15 @@ function Home() {
     setBlogs(updatedBlogObj);
   }
 
-
-
   return (
     <div className="container">
-      <div className="row">
-        <div className="col s12 m-2 l2 teal lighten-2">
-          <Sidebar />
-        </div>
-        <div className="col s12 m-7 l7">
-          <Blogs blogs={blogs} onDelete={handleDelete} onBlogUpdate={handleUpdate} />
-        </div>
-        <div className="col s12 m-3 l3">
-          <Form onUpdate={handlePost} />
-        </div>
-      </div>
+      <Blogs
+        blogs={blogs}
+        onDelete={handleDelete}
+        onBlogUpdate={handleUpdate}
+      />
+
+      <Form onUpdate={handlePost} />
     </div>
   );
 }
