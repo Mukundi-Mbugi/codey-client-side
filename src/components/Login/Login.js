@@ -10,6 +10,7 @@ function Login() {
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
     const [hasAccount, setHasAccount] = useState(false);
+    
 
     // const navigate = useNavigate();
 
@@ -20,8 +21,21 @@ function Login() {
             // navigate('/Dashboard');
         }catch(error){
             setError(error.code==='auth/email-already-in-use'? 'Email already in use': error.message);
-            console.log(error.message);
+            console.log(name, email, password);
         }
+
+        fetch('https://codeyblogs.herokuapp.com/authors', {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                name: name,
+                email: email,
+            })
+        })
+        .then(res=> res.json())
+        .then(data => console.log(data))
  
     }
     

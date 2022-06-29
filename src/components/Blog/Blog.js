@@ -1,16 +1,31 @@
 import React, { useState } from "react";
+import Body from "../BlogBody/Body";
 import EditForm from "../EditForm/EditForm";
-import './Blog.css'
+import "./Blog.css";
 
-function Blog({ blog, onDelete, onBlogUpdate }) {
-  const [isEditing, setIsEditing] = useState(false)
-  
+function Blog({ blog, onDelete, onBlogUpdate, onBlogLike }) {
+  const [isEditing, setIsEditing] = useState(false);
+
   function handleDeleteClick() {
     console.log({ id: blog.id });
     fetch(`https://codeyblogs.herokuapp.com/posts/${blog.id}`, {
       method: "DELETE",
-    })
-      onDelete(blog.id);
+    });
+    onDelete(blog.id);
+  }
+
+  function handleLikeClick(){
+    console.log({ id: blog.id });
+    fetch(`https://codeyblogs.herokuapp.com/likes/${blog.id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        likes: blog.likes + 1,
+      })
+    });
+    onBlogLike(blog.id);
   }
 
   return (
@@ -18,18 +33,37 @@ function Blog({ blog, onDelete, onBlogUpdate }) {
       <div className="card-horizontal">
         <div className="card-content">
           <h3 className="black-text text-lighten-1">{blog.title}</h3>
-          {!isEditing ? (<p className="black-text text-lighten-1">{blog.body}</p> ): 
-          <EditForm blog={blog} onBlogUpdate={onBlogUpdate} isEditing={isEditing} setIsEditing={setIsEditing} />}
+          {!isEditing ? (
+            <Body blog={blog} />
+          ) : (
+            <EditForm
+              blog={blog}
+              onBlogUpdate={onBlogUpdate}
+              isEditing={isEditing}
+              setIsEditing={setIsEditing}
+            />
+          )}
         </div>
         <div className="card-action">
-                  
           <i
-            className="small material-icons teal-text"
+            className="icon small material-icons teal-text"
             onClick={handleDeleteClick}
           >
             delete
           </i>
-          <i className="small material-icons teal-text lighten-2" onClick={() => setIsEditing((isEditing) => !isEditing)}>create</i>
+          <i
+            className="icon small material-icons teal-text lighten-2"
+            onClick={() => setIsEditing((isEditing) => !isEditing)}
+          >
+            create
+          </i>
+          <i
+            className="icon small material-icons teal-text"
+            onClick={handleLikeClick}
+          >
+            favorite
+          </i>
+          <p className="black-text text-lighten-1">{blog.likes}</p>
         </div>
       </div>
     </div>

@@ -1,24 +1,24 @@
-*{
-    background-color: #F3F3F9;
-    color: #1D3153;
+* {
+  background-color: #f3f3f9;
+  color: #1d3153;
 }
-.login{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.login-form{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: #1D3153;
-    background-color: white;
-    font-size: 1.2rem;
-    width: 50%;
-    height: 50%;
-    padding: 20px;
+.login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #1d3153;
+  background-color: white;
+  font-size: 1.2rem;
+  width: 50%;
+  height: 50%;
+  padding: 20px;
 }
 /* .login-form label{
     font-size: 1.2rem;
@@ -26,43 +26,43 @@
     justify-content: flex-start;
     display: inline-block;
 } */
-.login-form input{
-    border: 1px solid #1D3153 ;
-    border-radius: 5px ;
-    padding: 10px;
-    margin-bottom: 10px;
-    width: 50%;
+.login-form input {
+  border: 1px solid #1d3153;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 50%;
 }
-.login-form button{
-    border: 1px solid #1D3153 ;
-    border-radius: 5px ;
-    padding: 10px;
-    margin-top: 10px;
-    margin-bottom: 20px;
-    background-color: #1D3153 ;
-    color: white;
-    width: 50%;
-    cursor: pointer;
+.login-form button {
+  border: 1px solid #1d3153;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  background-color: #1d3153;
+  color: white;
+  width: 50%;
+  cursor: pointer;
 }
-.login-form button:hover{
-    background-color: #2b0d77 ;
-    color: white ;
+.login-form button:hover {
+  background-color: #2b0d77;
+  color: white;
 }
 .error_div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .error {
-    color: red;
-    font-size: 12px;
-    text-align: center;
-    align-items: center;
-  }
-  .sign-link{
-    color: rgb(255, 111, 0);
-    cursor: pointer;
-  }
-    .sign-link:hover{
-        color: rgb(252, 150, 72);
-    }
+  color: red;
+  font-size: 12px;
+  text-align: center;
+  align-items: center;
+}
+.sign-link {
+  color: rgb(255, 111, 0);
+  cursor: pointer;
+}
+.sign-link:hover {
+  color: rgb(252, 150, 72);
+}

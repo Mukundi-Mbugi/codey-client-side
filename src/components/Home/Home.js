@@ -29,12 +29,23 @@ function Home() {
     setBlogs(updatedBlogObj);
   }
 
+  function handleLike(id) {
+    const updatedBlogs = blogs.map((blog) => {
+      if (blog.id === id) {
+        return { ...blog, likes: blog.likes + 1 };
+      }
+      return blog;
+    });
+    setBlogs(updatedBlogs);
+  }
+
   return (
     <div className="container">
       <Blogs
         blogs={blogs}
         onDelete={handleDelete}
         onBlogUpdate={handleUpdate}
+        onBlogLike={handleLike}
       />
 
       <Form onUpdate={handlePost} />
