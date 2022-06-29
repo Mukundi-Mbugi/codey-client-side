@@ -48,3 +48,21 @@
     background-color: #2b0d77 ;
     color: white ;
 }
+.error_div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.error {
+    color: red;
+    font-size: 12px;
+    text-align: center;
+    align-items: center;
+  }
+  .sign-link{
+    color: rgb(255, 111, 0);
+    cursor: pointer;
+  }
+    .sign-link:hover{
+        color: rgb(252, 150, 72);
+    }
