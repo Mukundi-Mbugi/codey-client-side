@@ -56,8 +56,9 @@
   font-family: 'Poppins', sans-serif;
 }
 .login-form button:hover {
-  background-color: #2b0d77;
+  background-color: #f76830;
   color: white;
+  border: none;
 }
 .error_div {
   display: flex;
