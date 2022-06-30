@@ -7,7 +7,7 @@ import {
 } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 
-function Login() {
+function Login({ setAuthor }) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -27,21 +27,21 @@ function Login() {
           ? "Email already in use"
           : error.message
       );
-      console.log(name, email, password);
+      setAuthor({name:name, email:email});
     }
 
-    fetch("https://codeyblogs.herokuapp.com/authors", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        name: name,
-        email: email,
-      }),
-    })
-      .then((res) => res.json())
-      .then((data) => console.log(data));
+    // fetch("https://codeyblogs.herokuapp.com/authors", {
+    //   method: "POST",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    //   body: JSON.stringify({
+    //     name: name,
+    //     email: email,
+    //   }),
+    // })
+    //   .then((res) => res.json())
+    //   .then((data) => console.log(data));
   };
 
   const handleLogin = async (e) => {

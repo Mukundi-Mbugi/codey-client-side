@@ -3,3 +3,22 @@
 .body{
     font-family: 'Nunito', sans-serif;
 }
+.search-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    font-family: 'Poppins', sans-serif;
+  }
+  .search-div input{
+    border: 1px solid rgb(255, 88, 11);
+    border-radius: 2px;
+    width: 25%;
+    padding: 0 5px;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+  }
+  .search-div input:focus{
+    outline: none;
+  }

@@ -13,6 +13,7 @@
   justify-content: center;
   align-items: center;
   font-family: 'Poppins', sans-serif;
+  margin-bottom: 20px;
 }
 .login-form label{
   background-color: white;
@@ -69,7 +70,7 @@
   background-color: white;
 }
 .error {
-  color: red;
+  color: #f76830;
   font-size: 12px;
   text-align: center;
   align-items: center;
@@ -79,7 +80,7 @@
   background-color: white;
 }
 .sign-link {
-  color: rgb(255, 111, 0);
+  color: #f76830;
   cursor: pointer;
   
 }

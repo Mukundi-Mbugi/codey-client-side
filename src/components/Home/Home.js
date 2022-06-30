@@ -1,9 +1,13 @@
 import React, { useEffect, useState } from "react";
 import Form from "../Form/Form";
 import Blogs from "../Blogs/Blogs";
+import Login from "../Login/Login";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
+import Navbar from "../Navbar/Navbar";
 
 function Home() {
   const [blogs, setBlogs] = useState([]);
+  const [author, setAuthor] = useState([]);
 
   useEffect(() => {
     fetch("https://codeyblogs.herokuapp.com/")
@@ -41,15 +45,26 @@ function Home() {
 
   return (
     <>
-      <div className="container">
-        <Blogs
-          blogs={blogs}
-          onDelete={handleDelete}
-          onBlogUpdate={handleUpdate}
-          onBlogLike={handleLike}
-        />
-      </div>
-      <Form onUpdate={handlePost} />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/Login" element={<Login setAuthor={setAuthor} />} />
+          <Route
+            path="/Form"
+            element={<Form onUpdate={handlePost} author={author} />}
+          />
+          <Route
+            path="/"
+            element={
+              <Blogs
+                blogs={blogs}
+                onDelete={handleDelete}
+                onBlogUpdate={handleUpdate}
+                onBlogLike={handleLike}
+              />
+            }
+          />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }

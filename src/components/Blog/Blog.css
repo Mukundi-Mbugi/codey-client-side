@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;700&display=swap");
 
 .container{
-  display: grid;
+  display: flex;
   gap: 1px;
   grid-template-columns: repeat(3, 1fr);
   row-gap: 2rem;
@@ -56,8 +56,3 @@
   width: auto;
   font-family: 'Poppins', sans-serif;
 }
-/* .blog-posts{
-  display: grid;
-  gap: 1px;
-  grid-template-columns: repeat(3, 1fr);
-} */

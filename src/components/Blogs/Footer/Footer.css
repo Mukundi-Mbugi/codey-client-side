@@ -1,0 +1,54 @@
+.footer{
+    background-color: #141C2C;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    
+}
+#copyright{
+    background-color: transparent;
+    color: rgb(255, 117, 11);
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    margin-left: 10px;
+
+}
+.footer-icons{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 4px 0px;
+    width: 15%;
+    font-size: 30px;
+    margin-right: 20px;
+    background-color: transparent;
+    
+}
+.footer-icons i{
+    font-size: 20px;
+    background-color: transparent;
+    color: rgb(255, 117, 11);
+}
+.footer-icons a:hover{
+    color: #FFC107;
+}
+.values ul{
+    display: flex;
+    background-color: transparent;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: transparent;
+      
+}
+li{
+    background-color: transparent;
+    color: white;
+    font-size: 14px;
+}
+.values{
+    background-color: transparent;
+    width: 50%;
+}

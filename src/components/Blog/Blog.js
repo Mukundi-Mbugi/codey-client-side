@@ -28,8 +28,10 @@ function Blog({ blog, onDelete, onBlogUpdate, onBlogLike }) {
     onBlogLike(blog.id);
   }
 
+  
   return (
     <div>
+      
       <div className="card-horizontal">
         <div className="card-content">
           <h3 className="black-text text-lighten-1">{blog.title}</h3>
@@ -64,7 +66,7 @@ function Blog({ blog, onDelete, onBlogUpdate, onBlogLike }) {
             className="icon small material-icons teal-text"
             onClick={handleLikeClick}
           >
-            favorite
+            thumb_up
           </i>
           <p className="icon">{blog.likes}</p>
           </div>

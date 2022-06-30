@@ -22,7 +22,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 5px 10px;
+  padding: 2px 10px;
   border: none;
   color: #fff;
   background-color: rgb(255, 117, 11);
@@ -31,4 +31,57 @@
   font-family: 'Nunito', sans-serif;
   font-size: 14px;
   font-weight: 400;
+  font-family: 'Poppins', sans-serif;
+}
+.logout-btn:hover {
+  background-color: #10132e;
+}
+.login-btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px 10px;
+  border: none;
+  color: #fff;
+  background-color: #10132e ;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  font-family: 'Nunito', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: 'Poppins', sans-serif;
+}
+.login-btn:hover{
+  background-color: #fff;
+  color: #10132e;
+}
+.nav-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  height: 60px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.home-btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px 10px;
+  border: none;
+  color: #fff;
+  background-color: rgb(255, 117, 11) ;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  font-family: 'Nunito', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: 'Poppins', sans-serif;
+}
+.home-btn:hover{
+  background-color: #10132e;
+}
+.nav-bar a{
+  text-decoration: none;
 }

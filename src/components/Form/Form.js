@@ -1,7 +1,8 @@
 import React, { useState } from "react";
+import Navbar from "../Navbar/Navbar";
 import "./Form.css";
 
-function Form({onUpdate}) {
+function Form({ onUpdate, author }) {
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
 
@@ -17,7 +18,7 @@ function Form({onUpdate}) {
   function handleSubmitClick(e) {
     e.preventDefault();
 
-    fetch('https://codeyblogs.herokuapp.com/posts', {
+    fetch("https://codeyblogs.herokuapp.com/posts", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -25,16 +26,17 @@ function Form({onUpdate}) {
       body: JSON.stringify({
         title: title,
         body: body,
-      })
+        name: author.name,
+        email: author.email,
+      }),
     })
-    .then(res=> res.json())
-    .then(data => onUpdate(data))
-    
-    
+      .then((res) => res.json())
+      .then((data) => onUpdate(data));
   }
 
   return (
     <div>
+      <Navbar />
       <div className="form1">
         <div>
           <form className="create-form" onSubmit={handleSubmitClick}>
