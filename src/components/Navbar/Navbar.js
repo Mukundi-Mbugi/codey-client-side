@@ -11,8 +11,7 @@ function Navbar() {
           <div className="nav-header">
             <li>
               <NavLink to="/"><button className="home-btn">Home</button></NavLink>
-                
-             
+
             </li>
             <li>
               <NavLink to="/Login"><button className="login-btn">Login</button></NavLink>

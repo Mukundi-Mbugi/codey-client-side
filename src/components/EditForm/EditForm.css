@@ -20,8 +20,8 @@
     border-radius: 5px;
     padding: 10px;
     margin-bottom: 10px;
-    width: auto;
-    height: auto;
+    width: 20rem;
+    height: 50px;
 }
 .update-form textarea:focus {
     outline: none;

@@ -14,41 +14,32 @@ function Login({ setAuthor }) {
   const [error, setError] = useState("");
   const [hasAccount, setHasAccount] = useState(false);
 
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const handleSignup = async (e) => {
     e.preventDefault();
     try {
       const user = await createUserWithEmailAndPassword(auth, email, password);
-      // navigate('/Dashboard');
+      setAuthor({name:name, email:email});
+      navigate('/Form');
     } catch (error) {
       setError(
         error.code === "auth/email-already-in-use"
           ? "Email already in use"
           : error.message
       );
-      setAuthor({name:name, email:email});
+      
     }
 
-    // fetch("https://codeyblogs.herokuapp.com/authors", {
-    //   method: "POST",
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //   },
-    //   body: JSON.stringify({
-    //     name: name,
-    //     email: email,
-    //   }),
-    // })
-    //   .then((res) => res.json())
-    //   .then((data) => console.log(data));
+    
   };
 
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
       const user = await signInWithEmailAndPassword(auth, email, password);
-      // navigate('/Dashboard');
+      setAuthor({name:name, email:email});
+      navigate('/Form');
     } catch (error) {
       setError(error.message);
     }

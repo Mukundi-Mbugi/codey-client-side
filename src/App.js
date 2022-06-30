@@ -2,7 +2,7 @@ import "./index.css";
 import "./App.css";
 import Home from "./components/Home/Home.js";
 
-import Footer from "./components/Blogs/Footer/Footer";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (

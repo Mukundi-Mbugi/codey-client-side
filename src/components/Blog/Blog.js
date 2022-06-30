@@ -47,6 +47,7 @@ function Blog({ blog, onDelete, onBlogUpdate, onBlogLike }) {
               setIsEditing={setIsEditing}
             />
           )}
+          <h6>{`by: ${blog.author.name}`}</h6>
         </div>
         <div className="card-action">
           <i

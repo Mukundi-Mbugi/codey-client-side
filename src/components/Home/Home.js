@@ -19,10 +19,13 @@ function Home() {
     const updatedBlogs = blogs.filter((blog) => blog.id !== id);
     setBlogs(updatedBlogs);
   }
+
   function handlePost(updatedBlogs) {
+    console.log(updatedBlogs);
     const updatedBlogObj = [...blogs, updatedBlogs];
     setBlogs(updatedBlogObj);
   }
+
   function handleUpdate(editedBlogs) {
     const updatedBlogObj = blogs.map((blog) => {
       if (blog.id === editedBlogs.id) {

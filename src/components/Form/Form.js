@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import Navbar from "../Navbar/Navbar";
+import { useNavigate } from "react-router-dom";
 import "./Form.css";
 
 function Form({ onUpdate, author }) {
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
+
+  const navigate = useNavigate();
 
   function handleTitleChange(e) {
     setTitle(e.target.value);
@@ -31,7 +34,12 @@ function Form({ onUpdate, author }) {
       }),
     })
       .then((res) => res.json())
-      .then((data) => onUpdate(data));
+      .then((data) => {
+        onUpdate(data);
+        window.location.reload();
+        navigate('/');
+      });
+      
   }
 
   return (
