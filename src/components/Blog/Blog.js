@@ -30,7 +30,7 @@ function Blog({ blog, onDelete, onBlogUpdate, onBlogLike }) {
 
   
   return (
-    <div>
+    <div className="container">
       
       <div className="card-horizontal">
         <div className="card-content">

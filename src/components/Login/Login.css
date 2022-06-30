@@ -2,10 +2,16 @@
 
 .body{
     font-family: 'Nunito', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
 }
 * {
   background-color: #f3f3f9;
   color: #1d3153;
+  
 }
 .login {
   display: flex;
@@ -51,7 +57,7 @@
   margin-bottom: 20px;
   background-color: #1d3153;
   color: white;
-  width: 80%;
+  width: 100%;
   font-size: 20px;
   cursor: pointer;
   font-family: 'Poppins', sans-serif;
