@@ -69,7 +69,7 @@ function Blog({ blog, onDelete, onBlogUpdate, onBlogLike }) {
           >
             thumb_up
           </i>
-          <p className="icon">{blog.likes}</p>
+          <p id="likes" className="icon">{blog.likes}</p>
           </div>
         </div>
       </div>
