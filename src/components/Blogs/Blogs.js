@@ -3,19 +3,20 @@ import Blog from "../Blog/Blog";
 import Navbar from "../Navbar/Navbar";
 import "./Blogs.css";
 
-function Blogs({ blogs, onDelete, onBlogUpdate, onBlogLike }) {
-  function handleSearchClick() {
-    console.log("search");
-  }
+function Blogs({ blogs, onDelete, onBlogUpdate, onBlogLike, search, onSearchChange, clickSearch }) {
+  
+  
 
   return (
     <div>
       <Navbar />
       <div className="search-div">
-        <input type="text" placeholder="search" />
+        <input type="text" placeholder="search" 
+        value={search}
+        onChange={(e) => onSearchChange(e.target.value)} />
         <i
           className="icon small material-icons teal-text"
-          onClick={handleSearchClick}
+          onClick={clickSearch}
         >
           search
         </i>

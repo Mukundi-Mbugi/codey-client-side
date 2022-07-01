@@ -3,11 +3,12 @@ import Form from "../Form/Form";
 import Blogs from "../Blogs/Blogs";
 import Login from "../Login/Login";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
-import Navbar from "../Navbar/Navbar";
+
 
 function Home() {
   const [blogs, setBlogs] = useState([]);
   const [author, setAuthor] = useState([]);
+  const [search, setSearch] = React.useState("");
 
   useEffect(() => {
     fetch("https://codeyblogs.herokuapp.com/")
@@ -44,8 +45,17 @@ function Home() {
       return blog;
     });
     setBlogs(updatedBlogs);
-  }
+ }
 
+ function handleSearchChange(e) {
+    setSearch(e.target.value);
+    const filteredBlogs = blogs.filter((blog) =>{
+      return blog.author.name.toLowerCase().includes(search.toLowerCase());
+   
+   })
+   setBlogs(filteredBlogs);
+  }
+ 
   return (
     <>
       <BrowserRouter>
@@ -63,6 +73,9 @@ function Home() {
                 onDelete={handleDelete}
                 onBlogUpdate={handleUpdate}
                 onBlogLike={handleLike}
+                search={search} 
+                onSearchChange={setSearch}
+                clickSearch={handleSearchChange}
               />
             }
           />

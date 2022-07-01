@@ -3,8 +3,7 @@
     height: 100px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    
+    align-items: center;   
     
 }
 #copyright{
@@ -52,4 +51,35 @@ li{
 .values{
     background-color: transparent;
     width: 50%;
+}
+
+@media (max-width: 600px) {
+    .footer {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: max-content;
+    }
+    .values{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: max-content;
+    }
+    ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: max-content;
+    }
+    .footer-icons{
+        display: flex;
+        margin-left: 40px;
+        justify-content: space-between;
+        align-items: center;
+        height: max-content;
+    }
 }

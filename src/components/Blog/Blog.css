@@ -43,7 +43,55 @@
 }
 .card-content{
   font-family: 'Poppins', sans-serif;
+  text-align: center;
 }
 #likes{
   font-family: 'Poppins', sans-serif;
+}
+@media (max-width: 600px) {
+  .card-horizontal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+    border: solid 1px #29caf6;
+    font-size: 1.2rem;
+    font-weight: 400;
+    padding: 20px;
+  }
+  .card-action{
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+  }
+  .icon{
+    color: rgb(255, 88, 11);
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-left: 5px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  }
+  .icon:hover{
+    color: rgb(255, 11, 11);
+  }
+  .likes{
+    display: flex;
+    justify-content: first baseline;
+    align-items: baseline;
+  }
+  .likes p{
+    box-shadow: none;
+    color: red;
+    margin-left: 5px;
+    font-size: 25px;
+    font-weight: 300;
+    box-shadow: 1px 1px 2px #7c889a;
+  }
+  .card-content{
+    font-family: 'Poppins', sans-serif;
+  }
+  #likes{
+    font-family: 'Poppins', sans-serif;
+  }
 }

@@ -91,3 +91,9 @@
   width: 6vh;
   cursor: pointer;
 }
+
+@media (max-width: 600px) {
+  .nav-bar{
+    background-color: transparent;
+  }
+}
