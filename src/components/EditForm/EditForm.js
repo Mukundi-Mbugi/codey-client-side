@@ -18,8 +18,11 @@ function EditForm({ blog, onBlogUpdate, isEditing, setIsEditing }) {
       }),
     })
       .then((res) => res.json())
-      .then((updatedBlog) => onBlogUpdate(updatedBlog));
-    setIsEditing((isEditing) => !isEditing);
+      .then((updatedBlog) => {
+        onBlogUpdate(updatedBlog);
+        setIsEditing((isEditing) => !isEditing)
+        window.location.reload();
+      });
   }
 
   return (

@@ -37,7 +37,7 @@ function Form({ onUpdate, author }) {
       .then((data) => {
         onUpdate(data);
         window.location.reload();
-        navigate('/');
+  
       });
       
   }
