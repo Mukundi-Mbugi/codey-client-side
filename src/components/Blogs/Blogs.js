@@ -8,7 +8,7 @@ function Blogs({ blogs, onDelete, onBlogUpdate, onBlogLike, search, onSearchChan
   
 
   return (
-    <div>
+    <div className="display-blogs">
       <Navbar />
       <div className="search-div">
         <input type="text" placeholder="search" 
